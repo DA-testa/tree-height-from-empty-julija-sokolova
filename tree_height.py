@@ -25,7 +25,7 @@ def main():
     if "I" in b:
         c=input()
         put=list(map(int,input().split()))
-        print(computer_height(put))
+        print(compute_height(put))
     if "F" in b:
         files=input()
         if "a" not in files:
