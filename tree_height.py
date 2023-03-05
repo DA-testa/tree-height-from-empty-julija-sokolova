@@ -5,13 +5,37 @@ import threading
 
 
 def compute_height(n, parents):
-    # Write this function
-    max_height = 0
-    # Your code here
+    dop={}
+    def height(i):
+        if i in dop:
+            return dop[i]
+        if i==-1:
+            return 0
+        h=1+height(parents[i])
+        dop[i]=h
+        return h
+    max_height=0
+    for i in range(n):
+        max_height=max(max_height, height(i)
     return max_height
 
 
 def main():
+    b=input()
+    if b == "I":
+        c=input()
+        put=list(map(int,input().split()))
+        print(computer_height(put))
+    if b == "F":
+        files=input()
+        with open(files) as file:
+            g=int(file.readline())
+            output=list(map(int, file.readline().split()))
+            print(compute_height(put))
+        if "a" in files:
+            return 1               
+            
+            
     # implement input form keyboard and from files
     
     # let user input file name to use, don't allow file names with letter a
