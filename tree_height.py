@@ -29,7 +29,7 @@ def main():
     if "F" in b:
         files=input()
         if "a" not in files:
-            with open("./test/"+files) as filee:
+            with open("./test/"+files, mode='r') as filee:
             g=int(filee.readline())
             output=list(map(int, filee.readline().split()))
             print(compute_height(output))              
