@@ -22,18 +22,17 @@ def compute_height(n, parents):
 
 def main():
     b=input()
-    if b == "I":
+    if "I" in b:
         c=input()
         put=list(map(int,input().split()))
         print(computer_height(put))
-    if b == "F":
+    if "F" in b:
         files=input()
-        with open(files) as file:
+        if "a" not in b:
+            with open("./test/"+files) as file:
             g=int(file.readline())
             output=list(map(int, file.readline().split()))
-            print(compute_height(put))
-        if "a" in files:
-            return 1               
+            print(compute_height(output))              
             
             
     # implement input form keyboard and from files
