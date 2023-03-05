@@ -25,14 +25,14 @@ def main():
     if "I" in b:
         c=input()
         put=list(map(int,input().split()))
-        print(computer_height(put))
+        print(computer_height(c, put)
     if "F" in b:
         files=input()
         if "a" not in files:
-            with open("./test/", "r") as filee:
-            g=int(filee.readline())
-            output=list(map(int, filee.readline().split()))
-            print(compute_height(output))              
+            with open("test/"+files, "r") as filee:
+                g=int(filee.readline())
+                output=list(map(int, filee.readline().split()))
+                print(compute_height(output))              
             
             
     # implement input form keyboard and from files
