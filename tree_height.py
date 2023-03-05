@@ -23,7 +23,7 @@ def compute_height(n, parents):
 def main():
     b=input()
     if "I" in b:
-        c=input()
+        c=int(input())
         put=list(map(int,input().split()))
         print(compute_height(c,put))
     if "F" in b:
