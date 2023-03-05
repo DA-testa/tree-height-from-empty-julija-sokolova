@@ -28,8 +28,8 @@ def main():
         print(computer_height(put))
     if "F" in b:
         files=input()
-        if "a" not in b:
-            with open(files) as filee:
+        if "a" not in files:
+            with open("./test/"+files) as filee:
             g=int(filee.readline())
             output=list(map(int, filee.readline().split()))
             print(compute_height(output))              
